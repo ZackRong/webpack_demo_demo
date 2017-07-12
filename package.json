@@ -4,7 +4,9 @@
   "description": "webpack demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    'dev':'webpack-dev-server -d --hot --env.dev',
+    'build': 'webpack -p'
   },
   "repository": {
     "type": "git",

@@ -78,5 +78,33 @@ module.exports = {
               ]
           }
       ]
+  },
+
+  /**
+   * 配置webpack插件
+   * plugin和loader区别是：loader是在import时根据不同的文件，匹配不同的loader对这个文件进行处理
+   * plugin，关注的不是文件格式，而是在编译的各个阶段，会触发不同的事件，可以干预每个编译阶段
+   */
+
+  /**
+   * 配置开发时的服务器，以可以用http://127.0.0.1:8080这样的URL打开页面调试
+   * 并且带热更新的功能，打代码时保存一下，浏览器自动更新
+   * 如果修改CSS，不需要刷新页面可以直接生效
+   */
+  devServer:{
+      port:8100,
+
+      /**
+       * historyApiFallback用于配置页面重定向
+       *
+       * SPA入口是一个统一的html页面，比如：
+       * http://localhost:8080/foo
+       * 我们要返回给它
+       * http://localhost:8080/index.html
+       * 这个文件
+       *
+       * 配置为true，当访问的文件不存在时，返回根目录下的index.html文件
+       */
+      historyApiFallback:true
   }
 };
