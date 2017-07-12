@@ -6,9 +6,9 @@
 #### |— package.json                               项目配置信息
 #### |— node_modules                               npm安装的依赖包
 #### |— src                                        源代码
-#### |____|— components                            组件
-#### |____|— index.html                            入口html
-#### |____|— index.js                              入口js
-#### |____|— libs                                  不在npm和git上的库
-#### |____|— views                                 页面
-#### |_____webpack.config.js                        webpack配置文件
+#### |___|— components                             组件
+#### |___|— index.html                             入口html
+#### |___|— index.js                               入口js
+#### |___|— libs                                   不在npm和git上的库
+#### |___|— views                                  页面
+#### |____webpack.config.js                        webpack配置文件
