@@ -1,9 +1,9 @@
-#### 一步一步使用webpack搭建小demo
+## 一步一步使用webpack搭建小demo
 
-## 目录结构
+### 目录结构
 
-|— dist                                       打包输出目录，只需部署这个到生成环境
-|— package.json                               项目配置信息
+#### |— dist                                       打包输出目录，只需部署这个到生成环境
+#### |— package.json                               项目配置信息
 |— node_modules                               npm安装的依赖包
 |— src                                        源代码
 |   |— components                             组件
