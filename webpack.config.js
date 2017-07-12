@@ -68,14 +68,14 @@ module.exports = {
                * 当文件体积大于limit时，url-loader会调用file-loader，把文件存储到输出目录，
                * 并把引用的文件路径改写为输出后的路径
                */
-              use:{
-          {
-              loader:'url-loader',
-              options:{
-                  limit:10000
-              }
-          }
-              }
+              use:[
+                {
+                    loader:'url-loader',
+                    options:{
+                        limit:10000
+                    }
+                }
+              ]
           }
       ]
   }
