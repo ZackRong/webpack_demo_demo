@@ -8,7 +8,7 @@ import template from './index.html'
 export default class {
     mount(container) {
         container.innerHTML = template;
-        container.querySelector('gotoBar').addEventListener('click', () => {
+        container.querySelector('.gotoBar').addEventListener('click', function() {
             // 调到bar页面
             g.router.go('/bar');
         });

@@ -9,7 +9,7 @@ import template from './index.html'
 export default class {
     mount(container) {
         container.innerHTML = template;
-        container.querySelector('gotoFoo').addEventListener('click', () => {
+        container.querySelector('.gotoFoo').addEventListener('click', function(){
             // 调到foo页面
             g.router.go('/foo');
     });

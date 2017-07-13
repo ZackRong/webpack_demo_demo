@@ -1,6 +1,21 @@
 /**
  * Created by rongzhx on 2017/7/12 0012.
  */
+/**
+ * 如果webpack.config.js导出的是一个函数，那么webpack会执行它，并把返回的结果作为配置对象
+ *
+ * module.exports = (options = {}) => {
+ *  return {
+ *   // 配置内容
+ *  }
+ * }
+ *
+ * 该函数接受一个参数，参数值由命令行传入，如，当执行：
+ * webpack --env.dev --env.server localhost
+ * 那么，options值为{dev:true, server:localhost}
+ *
+ * 该参数对webpack-dev-server命令同样有效
+ */
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -11,10 +26,23 @@ module.exports = {
   // 配置打包输出
   output:{
       // 打包输出的目录
-      path: resolve(_dirname, 'dist'),
+      path: resolve(__dirname, 'dist'),
+
+      // 资源文件访问的公共目录。访问时通过这个目录访问
+      publicPath:'/assets/',
 
       // 入口js打包输出的文件名
-      name:'index.js'
+      filename:'index.js',
+
+      /**
+       * 使用import（）加载的文件会被分别打包，我们称这个包为chunk，chunkFilename用于配置
+       * 这个chunk输出的文件名
+       *
+       * [id]：编译时每个chunk会有一个id，
+       * [chunkhash]：这个chunk的hash值，文件发生变化时该值也会变，文件名加上该值可以
+       * 防止浏览器读取旧的缓存文件
+       */
+      chunkFilename:'[id].js?[chunkhash]'
   },
 
   module:{
@@ -84,15 +112,19 @@ module.exports = {
    * 配置webpack插件
    * plugin和loader区别是：loader是在import时根据不同的文件，匹配不同的loader对这个文件进行处理
    * plugin，关注的不是文件格式，而是在编译的各个阶段，会触发不同的事件，可以干预每个编译阶段
-   */
-
+     */
+  plugins:[
+      new HtmlWebpackPlugin({
+          template: './src/index.html'
+      })
+  ],
   /**
    * 配置开发时的服务器，以可以用http://127.0.0.1:8080这样的URL打开页面调试
    * 并且带热更新的功能，打代码时保存一下，浏览器自动更新
    * 如果修改CSS，不需要刷新页面可以直接生效
    */
   devServer:{
-      port:8100,
+      port:8080,
 
       /**
        * historyApiFallback用于配置页面重定向
@@ -104,7 +136,10 @@ module.exports = {
        * 这个文件
        *
        * 配置为true，当访问的文件不存在时，返回根目录下的index.html文件
+       * 指定index.html文件的路径
        */
-      historyApiFallback:true
+      historyApiFallback:{
+          index:'/assets/'
+      }
   }
 };
