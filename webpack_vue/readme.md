@@ -51,8 +51,9 @@ chunks：指明要引入的chunks。默认是全部
 port：应用端口
 host：应用host
 hot：是否开启热更新。开启后，打包后的文件名不能用contenthash、chunkhash，可以用hash
-publicPath：内存打包后，静态资源(JS、CSS、图片等)的公共路径，即打完包后的整个目录(eg. dist)，要放在这个publicPath下。
-            所以最终访问路径为：output.publicPath + output.path + publicPath + filename
+publicPath：内存打包后，html、静态资源(JS、CSS、图片等)的公共路径，即打完包后的整个目录(eg. dist)内容，要放在这个publicPath下。
+            所以最终访问路径为：publicPath + output.path + filename。
+            但这时的html里面的引入静态资源路径还是output.publicPath开头的，所以两者设置不一致，会找不到资源。
 ```
 ### 3，```output.publicPath```
 ```
