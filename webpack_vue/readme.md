@@ -1,4 +1,21 @@
-[toc]
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [2022-09-14](#2022-09-14)
+  - [一、基础配置](#%E4%B8%80%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE)
+  - [二、babel说明](#%E4%BA%8Cbabel%E8%AF%B4%E6%98%8E)
+- [2022-09-16](#2022-09-16)
+  - [一、配置](#%E4%B8%80%E9%85%8D%E7%BD%AE)
+    - [1，```html-webpack-plugin```](#1html-webpack-plugin)
+      - [1.1 作用](#11-%E4%BD%9C%E7%94%A8)
+      - [1.2 配置](#12-%E9%85%8D%E7%BD%AE)
+    - [2，```webpack-dev-server```](#2webpack-dev-server)
+      - [2.1 作用](#21-%E4%BD%9C%E7%94%A8)
+      - [2.2 配置](#22-%E9%85%8D%E7%BD%AE)
+    - [3，```output.publicPath```](#3outputpublicpath)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # 2022-09-14
 ## 一、基础配置
