@@ -61,7 +61,6 @@ publicPath：内存打包后，静态资源(JS、CSS、图片等)的公共路径
 ### 4，```HotModuleReplacementPlugin```
 #### 4.1 作用
 ```
-热更新。
-当源代码有修改后，webpack-dev-server重新打完包后，刷新页面。
+热更新。当源代码有修改后，webpack-dev-server重新打完包后，刷新页面。
 和webpack-dev-server的hot配置项，配置一个即可。
 ```
