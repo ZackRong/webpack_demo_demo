@@ -2,6 +2,7 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 const NODE_ENV = process.env.NODE_ENV;
 
@@ -56,6 +57,8 @@ module.exports = {
       // 内存打包后，生成的JS、CSS、图片等静态资源所在公共路径，所以最终静态资源路径为：output.publicPath + output.path + publicPath + name
       // publicPath: '/test'
     }),
+    // 热更新。和webpack-dev-server的hot配置项，配置一个即可
+    // new webpack.HotModuleReplacementPlugin(),
     // 这个要放最后
     new CleanWebpackPlugin()
   ]

@@ -1,5 +1,5 @@
 <template>
-  <div>vue demo</div>
+  <div>vue demo1</div>
 </template>
 <script>
 export default {

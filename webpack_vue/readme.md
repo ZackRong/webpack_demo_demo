@@ -2,17 +2,19 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [2022-09-14](#2022-09-14)
-  - [一、基础配置](#%E4%B8%80%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE)
-  - [二、babel说明](#%E4%BA%8Cbabel%E8%AF%B4%E6%98%8E)
+  - [一、基础配置](#一基础配置)
+  - [二、babel说明](#二babel说明)
 - [2022-09-16](#2022-09-16)
-  - [一、配置](#%E4%B8%80%E9%85%8D%E7%BD%AE)
+  - [一、配置](#一配置)
     - [1，```html-webpack-plugin```](#1html-webpack-plugin)
-      - [1.1 作用](#11-%E4%BD%9C%E7%94%A8)
-      - [1.2 配置](#12-%E9%85%8D%E7%BD%AE)
+      - [1.1 作用](#11-作用)
+      - [1.2 配置](#12-配置)
     - [2，```webpack-dev-server```](#2webpack-dev-server)
-      - [2.1 作用](#21-%E4%BD%9C%E7%94%A8)
-      - [2.2 配置](#22-%E9%85%8D%E7%BD%AE)
+      - [2.1 作用](#21-作用)
+      - [2.2 配置](#22-配置)
     - [3，```output.publicPath```](#3outputpublicpath)
+    - [4，```HotModuleReplacementPlugin```](#4hotmodulereplacementplugin)
+      - [4.1 作用](#41-作用)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -55,4 +57,10 @@ publicPath：内存打包后，静态资源(JS、CSS、图片等)的公共路径
 ### 3，```output.publicPath```
 ```
 引入静态资源时，需要添加的公共路径
+```
+### 4，```HotModuleReplacementPlugin```
+#### 4.1 作用
+```
+热更新。当源代码有修改后，webpack-dev-server重新打完包后，刷新页面。
+和webpack-dev-server的hot配置项，配置一个即可
 ```
