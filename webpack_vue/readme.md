@@ -25,7 +25,8 @@ webpack-cli：支持webpack命令，不然需要应用./node_modules/bin下的we
   port：应用端口
   host：应用host
   hot：是否开启热更新。开启后，打包后的文件名不能用contenthash、chunkhash，可以用hash
-  publicPath：内存打包后，静态资源(JS、CSS、图片等)的公共路径，即打完包后的整个目录(eg. dist)，要放在这个publicPath下。所以最终访问路径为：output.publicPath + output.path + publicPath + filename
+  publicPath：内存打包后，静态资源(JS、CSS、图片等)的公共路径，即打完包后的整个目录(eg. dist)，要放在这个publicPath下。
+              所以最终访问路径为：output.publicPath + output.path + publicPath + filename
 ```
 #### 3，```output.publicPath```
 ```
