@@ -1,14 +1,10 @@
 // 整个项目根入口
-import Vue from 'vue';
+import { createApp } from 'vue';
 
 import App from './App.vue';
 
-const el = document.createElement('div');
-document.body.appendChild(el);
+const app = createApp(App);
 
-const mainApp = new Vue({
-  el,
-  components: { App }
-});
+app.mount('#app');
 
-export default mainApp;
+export default app;

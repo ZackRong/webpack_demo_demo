@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --config config/dev.webpack.config.js"
+    "dev": "webpack --config config/dev.webpack.config.js",
+    "dev-server": "NODE_ENV=development webpack-dev-server --config config/dev.webpack.config.js"
   },
   "author": "rongzhx",
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^4.5.2",
     "vue-loader": "^17.0.0",
     "webpack": "^4.46.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.0"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
     "vue": "^3.2.39"
