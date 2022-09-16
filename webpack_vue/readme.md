@@ -10,8 +10,10 @@ webpack-cli：支持webpack命令，不然需要应用./node_modules/bin下的we
 # 2022-09-16
 ### 一、配置
 #### 1，```html-webpack-plugin```
-```
-作用：根据提供的html模板，自动生成新的html文件，并将打包后的JS自动引入
+```markdown
+### 作用
+根据提供的html模板，自动生成新的html文件，并将打包后的JS自动引入
+
 配置：
   title：生成的html标题，html模板内需要通过[htmlWebpackPlugin.options.title]进行引用
   filename：生成的html文件名，可以指定路径
