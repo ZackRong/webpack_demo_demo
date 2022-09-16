@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config config/dev.webpack.config.js",
     "dev-server": "NODE_ENV=development webpack-dev-server --config config/dev.webpack.config.js",
-    "doctoc": "doctoc readme.md"
+    "doctoc": "doctoc --title webpack_vue记录 readme.md"
   },
   "author": "rongzhx",
   "license": "ISC",
