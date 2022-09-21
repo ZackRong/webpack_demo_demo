@@ -15,6 +15,9 @@
     - [3，```output.publicPath```](#3outputpublicpath)
     - [4，```HotModuleReplacementPlugin```](#4hotmodulereplacementplugin)
       - [4.1 作用](#41-作用)
+- [2022-09-21](#2022-09-21)
+  - [一、配置](#一配置-1)
+    - [1，```context```](#1context)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -64,4 +67,11 @@ publicPath：内存打包后，html、静态资源(JS、CSS、图片等)的公�
 ```
 热更新。当源代码有修改后，webpack-dev-server重新打完包后，刷新页面。
 和webpack-dev-server的hot配置项，配置一个即可。
+```
+# 2022-09-21
+## 一、配置
+### 1，```context```
+```
+[1] 上下文路径，需要是绝对路径。entry这些是相对于它
+[2] 默认：node进程的CWD
 ```

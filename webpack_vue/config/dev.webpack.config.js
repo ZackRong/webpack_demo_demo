@@ -7,8 +7,10 @@ const webpack = require('webpack');
 const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
+  // context: __dirname,
   entry: {
     main: path.join(__dirname, '../src/index.js'),
+    // main: '../src/index.js',
     test: path.join(__dirname, '../src/test.js')
   },
   output: {
