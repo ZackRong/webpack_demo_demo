@@ -3,7 +3,12 @@ import { createApp } from 'vue';
 
 import App from './App.vue';
 
+const chunk = import('./user');
+
+console.log(chunk);
+
 const app = createApp(App);
+
 
 app.mount('#app');
 

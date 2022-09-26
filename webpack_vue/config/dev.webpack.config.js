@@ -9,6 +9,8 @@ const NODE_ENV = process.env.NODE_ENV;
 module.exports = {
   // context: __dirname,
   entry: {
+    // 一个入口，多个模块
+    // merge: [path.join(__dirname, '../src/index.js'), path.join(__dirname, '../src/test.js')],
     main: path.join(__dirname, '../src/index.js'),
     // main: '../src/index.js',
     test: path.join(__dirname, '../src/test.js')
@@ -17,8 +19,9 @@ module.exports = {
     path: path.join(__dirname, '../dist'),
     // webpackDevServer开启热更新后，不能使用chunkhash、contenthash
     filename: NODE_ENV === 'development' ? 'js/[name].bundle.[hash:8].js' : 'js/[name].bundle.[contenthash:8].js',
+    chunkFilename: NODE_ENV === 'development' ? 'js/[name].chunk.[hash:8].js' : 'js/[name].chunk.[contenthash:8].js',
     // 打包后的内容，所在的公共路径。访问需要通过 publicPath + path
-    // publicPath: '/test1/'
+    // publicPath: '/test1/',
   },
   module: {
     rules: [
