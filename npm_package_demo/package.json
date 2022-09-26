@@ -1,0 +1,14 @@
+{
+  "name": "npm_package_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doctoc": "doctoc --notitle readme.md"
+  },
+  "author": "rongzhx",
+  "license": "ISC",
+  "devDependencies": {
+    "doctoc": "^2.2.0"
+  }
+}
