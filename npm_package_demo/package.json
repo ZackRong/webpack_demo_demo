@@ -4,11 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "doctoc": "doctoc --notitle readme.md"
+    "doctoc": "doctoc --notitle readme.md",
+    "dev": "webpack --config config/dev.webpack.config.js"
   },
   "author": "rongzhx",
   "license": "ISC",
   "devDependencies": {
-    "doctoc": "^2.2.0"
+    "@babel/preset-env": "^7.19.3",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "doctoc": "^2.2.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/polyfill": "^7.12.1"
   }
 }
