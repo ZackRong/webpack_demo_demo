@@ -5,8 +5,10 @@ module.exports = {
   entry: path.join(__dirname, '../src/index.js'),
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: '[id].[contenthash:8].bundle.js',
-    chunkFilename: '[id].[contenthash:8].chunk.js'
+    filename: '[name].min.js',
+    chunkFilename: '[id].[contenthash:8].chunk.js',
+    library: 'MyLibrary',
+    libraryTarget: 'var'
   },
   module: {
     rules: [
