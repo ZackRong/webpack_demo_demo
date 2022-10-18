@@ -8,7 +8,8 @@ module.exports = {
     filename: '[name].min.js',
     chunkFilename: '[id].[contenthash:8].chunk.js',
     library: 'MyLibrary',
-    libraryTarget: 'var'
+    libraryTarget: 'umd',
+    auxiliaryComment: 'Test Comment'
   },
   module: {
     rules: [

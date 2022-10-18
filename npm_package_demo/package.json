@@ -1,11 +1,12 @@
 {
   "name": "@rongzhx/npm_package_demo",
-  "version": "1.0.2-beta",
-  "description": "",
+  "version": "1.0.6-beta",
+  "description": "umd",
   "main": "./dist/main.min.js",
   "scripts": {
     "doctoc": "doctoc --notitle readme.md",
-    "dev": "webpack --config config/dev.webpack.config.js"
+    "dev": "webpack --config config/dev.webpack.config.js",
+    "release": "webpack --config config/prod.webpack.config.js"
   },
   "author": "rongzhx",
   "license": "ISC",
