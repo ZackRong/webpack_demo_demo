@@ -1,4 +1,4 @@
-import '@babel/polyfill';
 import * as All from './math';
 
-export {All} ;
+// export {All} ;
+export default All;
