@@ -9,9 +9,10 @@ module.exports = {
     filename: '[name].min.js',
     chunkFilename: '[id].[contenthash:8].chunk.js',
     library: 'MyLibrary',
-    libraryTarget: 'umd',
-    auxiliaryComment: 'Test Comment',
-    // libraryExport: 'default'
+    // libraryTarget: 'umd',
+    libraryTarget: 'window',
+    // auxiliaryComment: 'Test Comment',
+    libraryExport: 'default'
   },
   module: {
     rules: [

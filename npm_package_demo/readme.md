@@ -15,6 +15,12 @@
 [1] 以变量形式输出，可通过MyLibrary访问
 [2] 需要以script标签形式引入
 ```
+#### 2.2 ```window```
+```
+[1] 变量挂载在window下
+[2] 需要以script标签形式引入
+[3] 需要保证访问变量的脚本在组件脚本引入之后
+```
 ### 3，```out.libraryExport```
 ```
 [1] 指定入口文件内的哪些模块要导出
@@ -41,4 +47,11 @@ npm login
 #### 3.2 正式包
 ```
 npm publish --access public
+```
+### 4，本地包修改测试
+```
+[1] 本地包(A)的路径下npm link一下，将本地包link到全局(B)
+[2] 使用到该包目录下(C)，npm link packageName，将使用的包link到全局(B)，再通过全局link到(A)
+[3] 修改A并重新打包，可以在C下同步
+[4] 结束：npm unlink <packageName> 解除绑定
 ```
