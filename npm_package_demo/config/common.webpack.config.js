@@ -2,17 +2,20 @@ const path = require('path');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  // entry: ['@babel/polyfill', path.join(__dirname, '../src/math.js')],
-  entry: ['@babel/polyfill', path.join(__dirname, '../src/index.js')],
+  entry: ['@babel/polyfill', path.join(__dirname, '../src/math.js')],
+  // entry: ['@babel/polyfill', path.join(__dirname, '../src/index.js')],
   output: {
     path: path.join(__dirname, '../dist'),
     filename: '[name].min.js',
     chunkFilename: '[id].[contenthash:8].chunk.js',
     library: 'MyLibrary',
     // libraryTarget: 'umd',
-    libraryTarget: 'window',
+    // libraryTarget: 'window',
+    libraryTarget: 'var',
     // auxiliaryComment: 'Test Comment',
-    libraryExport: 'default'
+    // libraryExport: 'default',
+    // 只导出 add 方法
+    // libraryExport: ['add']
   },
   module: {
     rules: [

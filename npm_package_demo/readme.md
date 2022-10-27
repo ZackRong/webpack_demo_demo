@@ -12,7 +12,7 @@
 ### 2，```out.libraryTarget```
 #### 2.1 ```var```
 ```
-[1] 以变量形式输出，可通过MyLibrary访问
+[1] 以变量形式输出，可通过window.MyLibrary访问
 [2] 需要以script标签形式引入
 ```
 #### 2.2 ```window```
@@ -25,6 +25,14 @@
 ```
 [1] 指定入口文件内的哪些模块要导出
 [2] 默认是undefined，即导出整个空间。eg. default
+[3] 如果导出是默认导出，即：export default，建议配置上
+[4] 可以配置数组。eg. ['module', 'subModule1']，则导出 module.subModule1
+[5] 入口导出为export时，['module'] 表示导出入口里面的 module 属性
+```
+### 4，导出方式
+```
+[1] 暴露为变量、通过在对象上赋值暴露：用script方式引入
+[2] 模块定义方式暴露：可以以模块方式引入
 ```
 ## 三、发布
 ### 1，切换为npm源

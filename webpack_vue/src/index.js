@@ -10,14 +10,24 @@ import App from './App.vue';
 // console.log(chunk);
 // console.log(print(1));
 
-/******* 以window方式打包 测试开始 *******/
+/******* 以window, var方式打包全部导出 测试开始 *******/
 
 console.log(window.MyLibrary, 1);
 setTimeout(() => {
   console.log(window.MyLibrary, MyLibrary.add(1, 2), 2);
+  // window.MyLibrary.print('test');
 }, 100);
 
-/******* 以window方式打包 测试结束 *******/
+/******* 以window, var方式打包全部导出 测试结束 *******/
+
+/******* 以window, var方式打包部分导出 测试开始 *******/
+
+console.log(window.MyLibrary, 1);
+setTimeout(() => {
+  console.log(window.MyLibrary, MyLibrary(1, 2), 2);
+}, 100);
+
+/******* 以window, var方式打包部分导出 测试结束 *******/
 
 const app = createApp(App);
 
