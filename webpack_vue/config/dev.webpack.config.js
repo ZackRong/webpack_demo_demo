@@ -36,6 +36,7 @@ module.exports = {
   },
   // webpack-dev-server配置
   devServer: {
+    // contentBase: '/dist/views',
     port: 8000,
     // 可以通过localhost访问
     host: '127.0.0.1',
@@ -43,6 +44,8 @@ module.exports = {
       errors: true
     },
     hot: true,
+    // 内容不要打包到内存，存到硬盘
+    writeToDisk: true
     // 内存打包后，生成的html、静态资源所在路径
     // publicPath: '/test2/'
   },
