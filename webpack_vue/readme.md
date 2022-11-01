@@ -21,6 +21,10 @@
 - [2022-09-26](#2022-09-26)
   - [一、配置](#一配置-2)
     - [1，```chunkFilename```](#1chunkfilename)
+- [2022-11-01](#2022-11-01)
+  - [一、配置](#一配置-3)
+    - [1，```sourceMap作用```](#1sourcemap作用)
+    - [2，```devtool```](#2devtool)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -85,4 +89,16 @@ publicPath：内存打包后，html、静态资源(JS、CSS、图片等)的公�
 ```
 [1] 按需加载的chunk的文件名
 [2] module(源代码，模块) -> chunk(每个模块打包出来的内容) -> bundle(1或多个chunk)
+```
+
+# 2022-11-01
+## 一、配置
+### 1，```sourceMap作用```
+```
+将打包后的生成的代码，与源码做个映射。便于报错时定位。
+```
+### 2，```devtool```
+```
+[1] 生成的sourcemap方式
+[2] eg. 报错时，从控制台点过去看到的是源码还是打包后的代码，以及位置
 ```

@@ -5,6 +5,8 @@ import { createApp } from 'vue';
 
 import App from './App.vue';
 
+consol.log(1);
+
 // const chunk = import('./user');
 
 // console.log(chunk);

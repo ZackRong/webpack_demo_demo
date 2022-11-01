@@ -7,6 +7,7 @@ const webpack = require('webpack');
 const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
+  devtool: 'none',
   // context: __dirname,
   entry: {
     // 一个入口，多个模块
