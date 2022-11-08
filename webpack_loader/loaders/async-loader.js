@@ -13,6 +13,7 @@ const asyncOperate = (source, params, callback) => {
   }, 100);
 };
 
+// 异步loader
 module.exports = function(source) {
   console.log('开始执行async-loader');
   // 异步loader。使用this.async获取callback
@@ -31,3 +32,11 @@ module.exports = function(source) {
   // });
   // return callback(null, target, 'a', 'b');
 };
+
+module.exports.pitch = function (remainingRequest, previousRequest, data) {
+  console.log('----------');
+  console.log('开始执行async-loader pitch');
+  console.log('remainingRequest: ', remainingRequest);
+  console.log('previousRequest: ', previousRequest);
+  console.log('----------');
+}

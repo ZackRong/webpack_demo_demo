@@ -1,5 +1,6 @@
 const { getOptions } = require('loader-utils');
 
+// 返回的信息不止一个
 module.exports = function(source) {
   console.log('开始执行return-more-info-loader');
   // 获取配置项
